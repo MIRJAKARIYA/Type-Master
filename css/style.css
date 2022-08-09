@@ -1,16 +1,18 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 #keyboard__container{
     padding: 0px 0px 12px 12px;
     background-color: rgb(179, 179, 179);
     border-radius: 5px;
     margin: 200px auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
     width: max-content;
 }
 .all__sec,.last__sec {
     display: flex;
 }
 .all__sec> div{
-
     width: 60px;
     height: 60px;
     display: flex;
@@ -23,7 +25,6 @@
     background-color: white;
 }
 .last__sec >div{
-
     width: 70px;
     height: 60px;
     display: flex;
@@ -56,14 +57,46 @@
 }
 #space{
     width: 517px;
-
-    
 }
 #space span{
-
     font-size: 30px;
     transform: rotate(90deg) translateX(5px);
+}
+
+
+/* text secton */
+#text{
+    width: 900px;
+    height: 200px;
+    margin: 100px auto -100px auto;
+    background-color: rgb(199, 199, 199);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow-x: auto;
     
+}
+#gen__text__button{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    transition:background-color 0.5s;
+}
+#gen__text__button:hover{
+    background-color: darkgreen;
+    cursor: pointer;
+    
+}
+#gen__text__button:active{
+    color: yellow;
 }
 
 
