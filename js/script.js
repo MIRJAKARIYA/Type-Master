@@ -51,9 +51,18 @@ const triggerAction = (action,e) =>{
     }
 }
 
+// test character
+
+const testCharacter = () =>{
+    const textField = getId('text').innerText;
+    
+}
+
+
 
 getId("body").addEventListener("keydown",(e)=>{
     triggerAction("keydown",e)
+    testCharacter()
 })
 
 getId("body").addEventListener("keyup",(e)=>{
@@ -69,6 +78,10 @@ getId('gen__text__button').addEventListener('click',()=>{
     })
 })
 
+
+
+
+
 const generateRandomText = (text) =>{
     const sampleTexts = text.map(txt => txt.body)
     const rand = Math.floor(Math.random()*text.length)
@@ -78,8 +91,23 @@ const generateRandomText = (text) =>{
 }
 
 const putRandomTextIntoField = (text) =>{
-    const sentence = text.split(' ').join('_')
-    getId("text").innerText=sentence.slice(0,50)
+    const textField = getId("text")
+    const textArray = text.split('\n').join('')
+    const filteredText = textArray.split('')
+    textField.innerHTML=null
+    for(let i=0;i<filteredText.length;i++){
+        const element = document.createElement('span')
+        element.innerText = filteredText[i]
+        element.classList.add('charClass')
+        textField.appendChild(element)
+    }
+
+    // const element = document.createElement('span')
+    // element.innerText='k'
+    // textField.appendChild(element)
+    
+    
+    // console.log(element)
 }
 
 
